@@ -1,2 +1,2 @@
 #!/bin/bash/
-ls -ltr; df -h
+ls -ltr; df -h; top
