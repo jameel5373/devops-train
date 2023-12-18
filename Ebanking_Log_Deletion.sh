@@ -2,10 +2,10 @@
 
 SOURCE_DIR=/tmp/Ebanking_logs
 
-RED -- \e[31m
-GREEN -- \e[32m
-YELLOW -- \e[33m
-normal -- \e[0m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 if [! -d $SOURCE_DIR ] #! denotes inverse and this statments reads the line
 then
