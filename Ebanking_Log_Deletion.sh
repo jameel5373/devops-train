@@ -7,7 +7,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-if [! -d $SOURCE_DIR ] #! denotes inverse and this statments reads the line
+if [! -d $SOURCE_DIR ] #! denotes inverse and this condition checkes whether directory exists or not
 then
     echo -e "$R Source Directory: $SOURCE_DIR doesn't exist. $N"
     fi
@@ -19,6 +19,7 @@ then
 
 echo "Deleting file: $line"
 rm -rf $line
+
     done <<< $FILES_TO_DELETE # giving files to delerte o/p to while loop input
 
 
