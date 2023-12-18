@@ -18,7 +18,7 @@ then
     do
 
 echo "Deleting file: $line"
-
+rm -rf $line
     done <<< $FILES_TO_DELETE # giving files to delerte o/p to while loop input
 
 
