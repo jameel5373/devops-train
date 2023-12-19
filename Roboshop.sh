@@ -14,7 +14,9 @@ do
     INSTANCE_TYPE="t2.micro"
     fi
 
-   IP-ADDRESS=$(aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type $INSTANCE_TYPE --security-group-ids sg-04e5362f0310fc7bf --tag-specifications "ResourceType=instance,Tags=[{Key=webserver,Value=$i}]" --query 'Instance[0].PrivateIpAddress' --output text)
+   IP_ADDRESS=$(aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type $INSTANCE_TYPE --security-group-ids sg-04e5362f0310fc7bf --tag-specifications "ResourceType=instance,Tags=[{Key=webserver,Value=$i}]" --query 'Instance[0].PrivateIpAddress' --output text)
+
+   echo "$i: $IP_ADDRESS"
 
    
 done
